@@ -9,5 +9,12 @@ set(SOURCE_FILES
 
 
 add_library(oppen ${SOURCE_FILES})
-target_include_directories(oppen PUBLIC include)
+target_include_directories(oppen PUBLIC include/oppen)
 target_link_libraries(oppen PUBLIC GL GLEW)
+
+install(TARGETS oppen
+	ARCHIVE DESTINATION /usr/local/lib
+	)
+install(TARGETS oppen
+	LIBRARY DESTINATION /usr/local/lib
+	)

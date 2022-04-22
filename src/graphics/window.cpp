@@ -35,5 +35,5 @@ OPPENAPI void oppen_window_render(oppen_window* win, GLclampf r, GLclampf g, GLc
     win->_render();
   }
 
-  glfwSwapBuffers(window);
+  glfwSwapBuffers(win->_window);
 }
